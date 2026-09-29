@@ -13,7 +13,7 @@ function fetchWithTimeout(url, ms) {
     return Promise.race([request, timeout]);
 }
 
-fetchWithTimeout("https://jsonplaceholder.typicode.com/posts", 2000)
+fetchWithTimeout("https://jsonplaceholder.typicode.com/posts", 90)
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error));
